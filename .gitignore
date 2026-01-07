@@ -1,0 +1,28 @@
+# Vivado Project Gitignore
+# Based on common Xilinx/Vivado project structures
+
+# Vivado generated directories
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+
+# Vivado log and journal files
+vivado*.log
+vivado*.jou
+*.pb
+
+# Usage statistics
+usage_statistics_webtalk.*
+
+# Local/User settings
+.Xil/
+
+# Output products (bitstreams, etc. - uncomment if you want to track them)
+# *.bit
+# *.bin
+# *.mcs
+# *.prm
+# *.sysdef
+# *.ltx
