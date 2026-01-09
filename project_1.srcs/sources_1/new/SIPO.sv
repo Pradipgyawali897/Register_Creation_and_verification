@@ -4,22 +4,17 @@
 // Engineer: 
 // 
 // Create Date: 01/08/2026 12:17:53 AM
-// Design Name: 
-// Module Name: SIPO
+// Design Name: SISO Shift Register
+// Module Name: reg_block
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
+// Description: 4-bit Serial In Serial Out Shift Register
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module SIPO(
+
+module reg_block(
     input  logic clk,
     input  logic rst_n,
     input  logic sin,
@@ -28,8 +23,8 @@ module SIPO(
 
     logic [3:0] q;
 
-    always_ff @(posedge clk or negedge rst_n) begin
-        if (!rst_n)
+    always_ff @(posedge clk or posedge rst_n) begin
+        if (rst_n)
             q <= 4'b0000;
         else
             q <= {q[2:0], sin};  

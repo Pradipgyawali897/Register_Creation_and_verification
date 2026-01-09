@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Register(
+module reg_block_siso(
     input logic clk,
     input logic rst_n,
     input logic si,
